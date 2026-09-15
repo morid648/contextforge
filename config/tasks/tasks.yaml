@@ -1,0 +1,39 @@
+rag_task:
+  description: "Search the vector index of uploaded documents for information relevant to the user query: '{query}'. Extract supporting passages and page citations."
+  expected_output: "A JSON string matching the ToolResponse contract containing status, answer, citations, and confidence score."
+
+memory_task:
+  description: "Retrieve relevant prior discussion, user preferences, and historical turns for the query: '{query}'."
+  expected_output: "A JSON string matching the ToolResponse contract containing status, answer, citations, and confidence score."
+
+web_search_task:
+  description: "Execute a live web search for recent updates, external events, or public news regarding: '{query}'."
+  expected_output: "A JSON string matching the ToolResponse contract containing status, answer, citations, and confidence score."
+
+external_api_task:
+  description: "Query the external domain API (ArXiv/literature repository) for foundational research papers and formal publications on: '{query}'."
+  expected_output: "A JSON string matching the ToolResponse contract containing status, answer, citations, and confidence score."
+
+evaluate_context_task:
+  description: |
+    Analyze the raw context gathered from all 4 sources for the user query: '{query}'.
+    Raw Sources Context:
+    {raw_context}
+
+    Your duties:
+    1. Score the relevance of each source from 0.0 to 1.0.
+    2. Any source reporting 'ERROR' status must NEVER be placed in relevant_sources, but must be reported in reasoning.
+    3. Filter out irrelevant or noisy content.
+    4. Provide clear reasoning justifying which sources were selected or dropped.
+  expected_output: "A JSON object conforming to ContextEvaluationResult with relevant_sources, filtered_context, relevance_scores, and reasoning."
+
+synthesize_response_task:
+  description: |
+    Write a final grounded research response for the query: '{query}' using ONLY the verified context below:
+    {filtered_context}
+
+    Critical Grounding Rules:
+    1. Use ONLY facts present in the filtered context. Do NOT speculate or introduce ungrounded knowledge.
+    2. If the context is inadequate or empty, set status to 'INSUFFICIENT_CONTEXT' and explain what information is missing.
+    3. Include exact citations mapping to the verified source locators.
+  expected_output: "A structured final response with status, answer, citations, confidence, and missing fields."
