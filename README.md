@@ -194,3 +194,8 @@ context-workflow/
 - 🧪 **[Full Test Results Report](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/TEST_RESULTS.md)**: Complete test matrix, live API verification (Gemini, Voyage, Firecrawl), and browser session trace.
 - 🔍 **[Root Cause Analysis & Architecture Iterations](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/ROOT_CAUSE_ANALYSIS.md)**: Engineering audit documenting bug fixes, API format changes, and resilience measures.
 
+---
+**Built by :**
+- [Anshul](https://github.com/morid648) 
+- [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)
+
