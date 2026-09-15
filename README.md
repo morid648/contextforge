@@ -127,55 +127,55 @@ pytest -v
 
 ```
 context-workflow/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ document_processing/     # PDF parsing, section extraction, and chunking
-â”‚   â”‚   â”œâ”€â”€ doc_parser.py
-â”‚   â”‚   â””â”€â”€ schemas.py
-â”‚   â”œâ”€â”€ rag/                     # Embeddings client, vector database, RAG pipeline
-â”‚   â”‚   â”œâ”€â”€ embeddings.py
-â”‚   â”‚   â”œâ”€â”€ retriever.py
-â”‚   â”‚   â””â”€â”€ rag_pipeline.py
-â”‚   â”œâ”€â”€ memory/                  # Session-scoped conversation memory & truncation
-â”‚   â”‚   â”œâ”€â”€ memory.py
-â”‚   â”‚   â””â”€â”€ truncation.py
-â”‚   â”œâ”€â”€ tools/                   # CrewAI tool wrappers & uniform response contracts
-â”‚   â”‚   â”œâ”€â”€ external_api_client.py
-â”‚   â”‚   â”œâ”€â”€ external_api_tool.py
-â”‚   â”‚   â”œâ”€â”€ memory_tool.py
-â”‚   â”‚   â”œâ”€â”€ rag_tool.py
-â”‚   â”‚   â”œâ”€â”€ schemas.py
-â”‚   â”‚   â”œâ”€â”€ web_search_client.py
-â”‚   â”‚   â””â”€â”€ web_search_tool.py
-â”‚   â”œâ”€â”€ workflows/               # Agents, tasks, parallel crew, and 4-stage flow
-â”‚   â”‚   â”œâ”€â”€ agents.py
-â”‚   â”‚   â”œâ”€â”€ crews.py
-â”‚   â”‚   â”œâ”€â”€ evaluator.py
-â”‚   â”‚   â”œâ”€â”€ flow.py
-â”‚   â”‚   â””â”€â”€ tasks.py
-â”‚   â”œâ”€â”€ generation/              # Synthesizer grounding engine & response schemas
-â”‚   â”‚   â”œâ”€â”€ generation.py
-â”‚   â”‚   â””â”€â”€ schemas.py
-â”‚   â”œâ”€â”€ ui/                      # Streamlit components (sidebar, chat, citations drawer)
-â”‚   â”‚   â”œâ”€â”€ chat.py
-â”‚   â”‚   â”œâ”€â”€ citations_drawer.py
-â”‚   â”‚   â”œâ”€â”€ session.py
-â”‚   â”‚   â””â”€â”€ sidebar.py
-â”‚   â””â”€â”€ config/                  # YAML configuration loader
-â”‚       â””â”€â”€ config_loader.py
-â”œâ”€â”€ config/
-â”‚   â”œâ”€â”€ agents/agents.yaml       # Agent roles, goals, and backstories
-â”‚   â””â”€â”€ tasks/tasks.yaml         # Task descriptions and expected outputs
-â”œâ”€â”€ data/
-â”‚   â”œâ”€â”€ sample_research_paper.pdf
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ tests/                       # Complete pytest suite (27 tests)
-â”œâ”€â”€ app.py                       # Streamlit web application entry point
-â”œâ”€â”€ pyproject.toml
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ prd.md
-â””â”€â”€ tasks.md
+├── src/
+│   ├── document_processing/     # PDF parsing, section extraction, and chunking
+│   │   ├── doc_parser.py
+│   │   └── schemas.py
+│   ├── rag/                     # Embeddings client, vector database, RAG pipeline
+│   │   ├── embeddings.py
+│   │   ├── retriever.py
+│   │   └── rag_pipeline.py
+│   ├── memory/                  # Session-scoped conversation memory & truncation
+│   │   ├── memory.py
+│   │   └── truncation.py
+│   ├── tools/                   # CrewAI tool wrappers & uniform response contracts
+│   │   ├── external_api_client.py
+│   │   ├── external_api_tool.py
+│   │   ├── memory_tool.py
+│   │   ├── rag_tool.py
+│   │   ├── schemas.py
+│   │   ├── web_search_client.py
+│   │   └── web_search_tool.py
+│   ├── workflows/               # Agents, tasks, parallel crew, and 4-stage flow
+│   │   ├── agents.py
+│   │   ├── crews.py
+│   │   ├── evaluator.py
+│   │   ├── flow.py
+│   │   └── tasks.py
+│   ├── generation/              # Synthesizer grounding engine & response schemas
+│   │   ├── generation.py
+│   │   └── schemas.py
+│   ├── ui/                      # Streamlit components (sidebar, chat, citations drawer)
+│   │   ├── chat.py
+│   │   ├── citations_drawer.py
+│   │   ├── session.py
+│   │   └── sidebar.py
+│   └── config/                  # YAML configuration loader
+│       └── config_loader.py
+├── config/
+│   ├── agents/agents.yaml       # Agent roles, goals, and backstories
+│   └── tasks/tasks.yaml         # Task descriptions and expected outputs
+├── data/
+│   ├── sample_research_paper.pdf
+│   └── README.md
+├── tests/                       # Complete pytest suite (27 tests)
+├── app.py                       # Streamlit web application entry point
+├── pyproject.toml
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── prd.md
+└── tasks.md
 ```
 
 ---
