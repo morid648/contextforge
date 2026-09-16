@@ -220,4 +220,4 @@ Intent pattern correctness was additionally verified with 8 hand-crafted cases c
 
 ---
 
-*Document generated: 2026-09-15 · Project: context-workflow · Status: All issues resolved*
+*Document generated: 2026-09-15 · Project: contextforge · Status: All issues resolved*

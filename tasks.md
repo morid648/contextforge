@@ -1,6 +1,6 @@
 # Tasks: Multi-Agent Context Engineering Research Assistant
 
-This document outlines the atomic, phased execution tasks required to build the Multi-Agent Context Engineering Research Assistant according to [prd.md](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/prd.md).
+This document outlines the atomic, phased execution tasks required to build the Multi-Agent Context Engineering Research Assistant according to [prd.md](prd.md).
 
 Tasks are strictly ordered by dependency. Each phase unlocks subsequent phases. Each task contains explicit file targets, implementation requirements, dependencies, and atomic verification criteria.
 

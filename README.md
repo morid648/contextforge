@@ -64,7 +64,7 @@ flowchart TD
 ```bash
 # Clone the repository
 git clone <repo-url>
-cd context-workflow
+cd contextforge
 
 # Create virtual environment
 python -m venv .venv
@@ -126,7 +126,7 @@ pytest -v
 ## Project Structure
 
 ```
-context-workflow/
+contextforge/
 ├── src/
 │   ├── document_processing/     # PDF parsing, section extraction, and chunking
 │   │   ├── doc_parser.py
@@ -190,9 +190,9 @@ context-workflow/
 
 ## Documentation & Additional Guides
 
-- 📘 **[Comprehensive How-To-Use Guide](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/HOW_TO_USE.md)**: Detailed step-by-step handbook covering architecture concepts, API key setup, 1-click sample document ingestion, query patterns, and troubleshooting.
-- 🧪 **[Full Test Results Report](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/TEST_RESULTS.md)**: Complete test matrix, live API verification (Gemini, Voyage, Firecrawl), and browser session trace.
-- 🔍 **[Root Cause Analysis & Architecture Iterations](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/ROOT_CAUSE_ANALYSIS.md)**: Engineering audit documenting bug fixes, API format changes, and resilience measures.
+- 📘 **[Comprehensive How-To-Use Guide](HOW_TO_USE.md)**: Detailed step-by-step handbook covering architecture concepts, API key setup, 1-click sample document ingestion, query patterns, and troubleshooting.
+- 🧪 **[Full Test Results Report](TEST_RESULTS.md)**: Complete test matrix, live API verification (Gemini, Voyage, Firecrawl), and browser session trace.
+- 🔍 **[Root Cause Analysis & Architecture Iterations](ROOT_CAUSE_ANALYSIS.md)**: Engineering audit documenting bug fixes, API format changes, and resilience measures.
 
 ---
 **Built by :**

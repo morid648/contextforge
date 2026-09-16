@@ -39,7 +39,7 @@ Traditional conversational AI applications often suffer from two major failure m
 
 ## 2. How the 4-Stage Multi-Agent Architecture Works
 
-When you submit a query, the assistant executes a 4-stage pipeline orchestrated by [`ResearchAssistantFlow`](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/src/workflows/flow.py):
+When you submit a query, the assistant executes a 4-stage pipeline orchestrated by [`ResearchAssistantFlow`](src/workflows/flow.py):
 
 ```
                                 [ User Query ]
@@ -89,7 +89,7 @@ When you submit a query, the assistant executes a 4-stage pipeline orchestrated 
 ```bash
 # 1. Clone the repository
 git clone <repository-url>
-cd context-workflow
+cd contextforge
 
 # 2. Create a virtual environment
 python -m venv .venv
@@ -118,7 +118,7 @@ Copy-Item .env.example .env
 cp .env.example .env
 ```
 
-Open [`.env`](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/.env) in your editor. The system supports modern provider keys with **automatic format detection**:
+Open [`.env`](.env) in your editor. The system supports modern provider keys with **automatic format detection**:
 
 ```env
 # 1. LLM Synthesis Provider (Google Gemini)
@@ -175,7 +175,7 @@ If you want to test the system immediately without preparing your own PDF:
    ```
    [ 📥 Load Sample Research Paper Now ]
    ```
-3. Click this button. The system will automatically parse, chunk, and embed [`data/sample_research_paper.pdf`](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/data/sample_research_paper.pdf) (*"Context Engineering for Multi-Agent LLM Systems"*).
+3. Click this button. The system will automatically parse, chunk, and embed [`data/sample_research_paper.pdf`](data/sample_research_paper.pdf) (*"Context Engineering for Multi-Agent LLM Systems"*).
 4. Within 2–3 seconds, the sidebar badge updates to `🟢 Assistant Ready (Document Indexed)` and the chat input field unlocks!
 
 ### Method B: Uploading Your Own PDFs
@@ -289,7 +289,7 @@ Expected output:
 30 passed in ~33s
 ```
 
-For detailed breakdown of all passed tests, refer to [TEST_RESULTS.md](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/TEST_RESULTS.md).
+For detailed breakdown of all passed tests, refer to [TEST_RESULTS.md](TEST_RESULTS.md).
 
 ---
 
@@ -301,7 +301,7 @@ For detailed breakdown of all passed tests, refer to [TEST_RESULTS.md](file:///g
   - If using **Firecrawl**, your key should start with `fc-`.
   - If using **WebSearchAPI.ai**, your key should start with `wsa_`.
   - If using **Tavily**, your key should start with `tvly-`.
-  - After updating [`.env`](file:///g:/Data%20Analytics/19.Portfolio/context-workflow/.env), restart Streamlit so it re-reads environment variables.
+  - After updating [`.env`](.env), restart Streamlit so it re-reads environment variables.
 
 ### Q2: Chat input is disabled with a lock icon
 - **Cause:** You have not loaded a document yet.
@@ -315,4 +315,4 @@ For detailed breakdown of all passed tests, refer to [TEST_RESULTS.md](file:///g
 
 ### Q5: "ModuleNotFoundError: No module named 'src'"
 - **Cause:** The command was run outside the project root directory or the virtual environment is not active.
-- **Solution:** Make sure your terminal is inside `g:\Data Analytics\19.Portfolio\context-workflow` and run `.venv\Scripts\Activate.ps1`.
+- **Solution:** Make sure your terminal is inside the `contextforge` project directory and run `.venv\Scripts\Activate.ps1`.
