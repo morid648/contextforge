@@ -1,18 +1,9 @@
-"""Context-gathering crew and concurrent execution harness (FR-602)."""
+"""Concurrent execution harness for the 4 heterogeneous context tools (FR-602)."""
 
-import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Any, Dict, Optional
-from crewai import Crew, Process
+from typing import Any, Dict
 
 from ..tools.schemas import ToolResponse
-from .agents import (
-    create_external_api_agent,
-    create_memory_agent,
-    create_rag_agent,
-    create_web_agent,
-)
-from .tasks import create_task
 
 
 class ContextGatheringHarness:
@@ -63,24 +54,3 @@ class ContextGatheringHarness:
                     )
 
         return results
-
-
-def create_context_gathering_crew(query: str, tools: Dict[str, Any]) -> Crew:
-    """Instantiates a CrewAI Crew containing the 4 context agents and their tasks."""
-    rag_agent = create_rag_agent(tools=[tools["rag_tool"]] if "rag_tool" in tools else None)
-    memory_agent = create_memory_agent(tools=[tools["memory_tool"]] if "memory_tool" in tools else None)
-    web_agent = create_web_agent(tools=[tools["web_tool"]] if "web_tool" in tools else None)
-    ext_agent = create_external_api_agent(tools=[tools["external_api_tool"]] if "external_api_tool" in tools else None)
-
-    tasks = [
-        create_task("rag_task", rag_agent, query=query),
-        create_task("memory_task", memory_agent, query=query),
-        create_task("web_search_task", web_agent, query=query),
-        create_task("external_api_task", ext_agent, query=query),
-    ]
-
-    return Crew(
-        agents=[rag_agent, memory_agent, web_agent, ext_agent],
-        tasks=tasks,
-        verbose=True,
-    )

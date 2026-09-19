@@ -1,6 +1,5 @@
 """Evaluator task dynamic builder, schema validator, and error-isolation auditor (FR-603 - FR-605)."""
 
-import json
 import re
 from typing import Any, Dict, List, Optional
 from ..generation.schemas import ContextEvaluationResult
@@ -97,32 +96,4 @@ class EvaluatorEngine:
             filtered_context=filtered_context,
             relevance_scores=relevance_scores,
             reasoning=reasoning,
-        )
-
-    def parse_evaluation_output(self, raw_output: str) -> ContextEvaluationResult:
-        """Parses LLM output into ContextEvaluationResult with robust fallback (FR-604)."""
-        clean_text = raw_output.strip()
-
-        # Try direct JSON parsing
-        try:
-            data = json.loads(clean_text)
-            return ContextEvaluationResult.model_validate(data)
-        except Exception:
-            pass
-
-        # Try markdown code block extraction
-        json_match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", clean_text, re.DOTALL)
-        if json_match:
-            try:
-                data = json.loads(json_match.group(1))
-                return ContextEvaluationResult.model_validate(data)
-            except Exception:
-                pass
-
-        # Robust best-effort fallback
-        return ContextEvaluationResult(
-            relevant_sources=[],
-            filtered_context={},
-            relevance_scores={},
-            reasoning=f"Failed to parse LLM structured evaluation. Raw output: {clean_text[:200]}",
         )

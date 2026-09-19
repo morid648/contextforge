@@ -1,20 +1,17 @@
 """YAML configuration loader for agents, tasks, and system parameters."""
 
-import os
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 import yaml
 
 
 class ConfigLoader:
     """Loads and caches configuration files for agents and tasks."""
 
-    def __init__(self, base_config_dir: Optional[Path] = None):
-        if base_config_dir is None:
-            # Look for config/ directory relative to workspace root or current file
-            project_root = Path(__file__).resolve().parent.parent.parent
-            base_config_dir = project_root / "config"
-        self.base_config_dir = Path(base_config_dir)
+    def __init__(self):
+        # config/ directory relative to the project root
+        project_root = Path(__file__).resolve().parent.parent.parent
+        self.base_config_dir = project_root / "config"
         self._cache: Dict[str, Dict[str, Any]] = {}
 
     def load_yaml(self, file_path: Path | str) -> Dict[str, Any]:

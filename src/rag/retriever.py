@@ -1,4 +1,4 @@
-"""Vector store client supporting Milvus Lite and local in-process cosine storage."""
+"""SQLite-backed vector store client with cosine-similarity retrieval."""
 
 import json
 import math
