@@ -1,6 +1,10 @@
 # Tasks: Multi-Agent Context Engineering Research Assistant
 
-This document outlines the atomic, phased execution tasks required to build the Multi-Agent Context Engineering Research Assistant according to [prd.md](prd.md).
+**Author & System Architect:** Anshul ([GitHub: morid648](https://github.com/morid648))  
+**Document Type:** Phased Engineering Task Plan (Built from Scratch)  
+**Specification:** Core System Architecture Specification (Engineered from first principles).
+
+This document outlines the atomic, phased execution tasks designed and executed to build the Multi-Agent Context Engineering Research Assistant from scratch.
 
 Tasks are strictly ordered by dependency. Each phase unlocks subsequent phases. Each task contains explicit file targets, implementation requirements, dependencies, and atomic verification criteria.
 
@@ -392,7 +396,7 @@ flowchart TD
   - **Path:** `data/sample_research_paper.pdf`, `data/README.md`
   - **Action:**
     - Place a sample PDF document in `data/` for immediate demo and recruitment test runs.
-    - Document sample queries: one query found in document, one query requiring web search, one conversational reference, and one unanswerable query.
+    - Document sample queries: one query found in document, one query requiring web search, one conversational recall / memory turn query, and one unanswerable query.
   - **Dependencies:** TASK-001
   - **Verification:** Confirm sample PDF is readable by `DocumentParser`.
 

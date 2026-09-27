@@ -47,3 +47,7 @@ outputs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Internal documentation
+prd.md
+

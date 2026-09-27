@@ -1,5 +1,7 @@
 # Comprehensive User Guide: Context Engineering Research Assistant
 
+> **Architect & Creator:** [Anshul](https://github.com/morid648) · [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)  
+> **Architecture:** Custom-designed and engineered from scratch from first principles.  
 > A practical, end-to-end handbook covering architecture concepts, quickstart setup, interactive usage, source inspection, and troubleshooting for researchers, analysts, and developers.
 
 ---

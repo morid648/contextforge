@@ -93,3 +93,4 @@ def render_sidebar() -> None:
             st.rerun()
 
         st.caption(f"Session ID: `{st.session_state.session_id}`")
+        st.caption("Designed & Built from scratch by [Anshul](https://github.com/morid648)")

@@ -1,5 +1,7 @@
 # Multi-Agent Context Engineering Research Assistant — Comprehensive Test Report
 
+> **Author & System Architect:** [Anshul](https://github.com/morid648) · [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)  
+> **Architecture:** Custom-built from scratch multi-source context orchestration platform  
 > **Date:** September 15, 2026  
 > **Environment:** Windows, Python 3.13.14, Streamlit 1.43+, Pytest 9.1.1  
 > **Primary Integrations:** Google Gemini (`gemini-3.5-flash`), Voyage AI (`voyage-4`), Firecrawl (`api.firecrawl.dev`), ArXiv REST API  

@@ -1,12 +1,15 @@
 # Multi-Agent Context Engineering Research Assistant
 
-A multi-agent research assistant that solves complex analytical queries by assembling, auditing, and synthesizing context across **four independent sources in parallel**:
-1. **Document Vector RAG** (uploaded PDF vector index)
-2. **Session Memory** (thread-scoped conversation history)
-3. **Live Web Search** (real-time news and public developments)
+> **Architect & Creator:** [Anshul](https://github.com/morid648) · [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)  
+> **Core Architecture:** Custom-designed and engineered from scratch from first principles to solve multi-source context orchestration, mathematical relevance evaluation, and strict hallucination prevention.
+
+A production-grade multi-agent research assistant built entirely from scratch that solves complex analytical queries by assembling, auditing, and synthesizing context across **four independent sources in parallel**:
+1. **Document Vector RAG** (uploaded PDF vector index with contextualized embeddings)
+2. **Session Memory** (thread-scoped conversation history with sentence-boundary truncation)
+3. **Live Web Search** (real-time news and public developments via multi-provider auto-detection)
 4. **Academic/Domain API** (structured scientific literature from ArXiv)
 
-Unlike standard single-source RAG chatbots, this architecture tackles the core challenge of **Context Engineering**: systematically assembling heterogeneous context, passing it through an **Evaluator Agent** that drops irrelevant data and isolates failed APIs, and passing only verified context to a **Synthesizer Agent** that enforces factual groundedness with pinpoint citations.
+Unlike standard single-source RAG chatbots or generic wrappers, this architecture was engineered from the ground up to solve the core challenge of **Context Engineering**: systematically assembling heterogeneous context, passing it through an **Evaluator Engine** that mathematically scores relevance, drops noise, and isolates failed external APIs, and passing only verified context to a **Synthesizer Engine** that enforces factual groundedness with pinpoint citations and refusal guarantees.
 
 ---
 
@@ -168,13 +171,12 @@ contextforge/
 ├── data/
 │   ├── sample_research_paper.pdf
 │   └── README.md
-├── tests/                       # Complete pytest suite (27 tests)
+├── tests/                       # Complete pytest suite (30 tests)
 ├── app.py                       # Streamlit web application entry point
 ├── pyproject.toml
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
-├── prd.md
 └── tasks.md
 ```
 

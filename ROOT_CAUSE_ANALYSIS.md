@@ -1,6 +1,8 @@
-﻿# Root Cause Analysis — Context Engineering Research Assistant
+# Root Cause Analysis — Context Engineering Research Assistant
 
-> Engineering post-mortem documenting all bugs discovered during live testing, their root causes, iterations, and applied fixes.
+> **Author & System Architect:** [Anshul](https://github.com/morid648) · [LinkedIn](https://www.linkedin.com/in/anshul-chaudhary-508138308/)  
+> **Architecture:** Custom-built from scratch multi-source context orchestration platform.  
+> Engineering post-mortem documenting all edge cases discovered during system design, iterative refinement, and validation of the custom-built context engineering architecture.
 
 ---
 
